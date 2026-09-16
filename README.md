@@ -39,4 +39,4 @@ python3 <folder>/<file>.py
 
 Maintained by Egor as part of ongoing Python coursework.
 
-<sub>Note: some exercises here were written while following Bro Code's Python tutorials on YouTube; original teaching content © Bro Code.</sub>
+<sub>Note: Some exercises here were written while following Bro Code's Python tutorials on YouTube; original teaching content © Bro Code.</sub>
