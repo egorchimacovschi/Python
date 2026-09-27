@@ -33,6 +33,8 @@ class Game:
         self.player = PhysicsEntity(self, 'player', (50, 50), (8, 15))
 
         self.tilemap = Tilemap(self, tile_size=16)
+
+        self.scroll = [0, 0]
     
     def run(self):
         self.screen.blit(self.assets['player'], (100, 100))
@@ -40,10 +42,10 @@ class Game:
         while True:
             self.display.fill((14, 219, 248))
 
-            self.tilemap.render(self.display)
+            self.tilemap.render(self.display, offset=self.scroll)
 
             self.player.update(self.tilemap, (self.movement[1] - self.movement[0], 0))
-            self.player.render(self.display)
+            self.player.render(self.display, offset=self.scroll)
 
             print(self.tilemap.physics_rect_around(self.player.pos))
 
