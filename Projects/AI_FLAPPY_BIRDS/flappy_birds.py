@@ -29,6 +29,8 @@ class Game:
 
         self.ground_scroll = 0
         self.scroll_speed = 4
+        self.flying = False
+        self.game_over = False
 
         self.background_img = pygame.image.load(
             "./data/img/bg.png"
@@ -40,25 +42,42 @@ class Game:
         self.ground_img = pygame.transform.scale(self.ground_img, (self.screen_width + self.screen_width * 0.04, self.screen_height * 0.1))
 
 
-        flappy  = entity.Bird(100, self.screen_height // 2)
-        bird_group.add(flappy)
+        self.flappy  = entity.Bird(100, self.screen_height // 2, self.screen_height * 0.91, self.flying, self.game_over)
+        bird_group.add(self.flappy)
         
    
     def run(self):
         while self.running:
 
+            #draw the background
             self.screen.blit(self.background_img, (0, 0))
+
+
             bird_group.draw(self.screen)
             bird_group.update()
+
+            #draw and ground
             self.screen.blit(self.ground_img, (self.ground_scroll, self.screen_height * 0.92))
-            self.ground_scroll -= self.scroll_speed
-            if abs(self.ground_scroll) > self.screen_width * 0.04:
-                self.ground_scroll = 0
+
+            #check if the birds hits the ground
+            if self.flappy.rect.bottom > self.flappy.ground_border:
+                self.game_over = True
+                self.flappy.game_over = True
+                self.flying = self.flappy.flying = False
+
+            if self.game_over == False:
+                #draw and scroll the ground
+                self.ground_scroll -= self.scroll_speed
+                if abs(self.ground_scroll) > self.screen_width * 0.04:
+                    self.ground_scroll = 0
 
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     pygame.quit()
                     sys.exit()
+                if event.type == pygame.MOUSEBUTTONDOWN and self.flying == False and self.game_over == False:
+                    self.flying = True
+                    self.flappy.flying = True
 
 
             pygame.display.flip()
