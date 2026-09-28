@@ -1,5 +1,7 @@
 import pygame
 import sys
+import scripts.bird as entity
+from scripts.bird import bird_group
 
 
 class Game:
@@ -37,12 +39,17 @@ class Game:
         )
         self.ground_img = pygame.transform.scale(self.ground_img, (self.screen_width + self.screen_width * 0.04, self.screen_height * 0.1))
 
+
+        flappy  = entity.Bird(100, self.screen_height // 2)
+        bird_group.add(flappy)
         
    
     def run(self):
         while self.running:
 
             self.screen.blit(self.background_img, (0, 0))
+            bird_group.draw(self.screen)
+            bird_group.update()
             self.screen.blit(self.ground_img, (self.ground_scroll, self.screen_height * 0.92))
             self.ground_scroll -= self.scroll_speed
             if abs(self.ground_scroll) > self.screen_width * 0.04:
