@@ -6,8 +6,8 @@ My dedication to Python — a personal collection of exercises, mini-programs, a
 
 | Folder | Content |
 |---|---|
-| [`Py_learning`](./Py_learning) | Core Python concepts: loops, functions, OOP, collections, decorators, file I/O, GUI (PyQt), and small practice games/programs |
 | [`Projects`](./Projects) | Slightly more complete standalone applications (digital clock, weather app) built on top of what was learned in `Py_learning` |
+| [`Py_learning`](./Py_learning) | Core Python concepts: loops, functions, OOP, collections, decorators, file I/O, GUI (PyQt), and small practice games/programs |
 
 Each folder has its own `README.md` with more detail on what's inside.
 
