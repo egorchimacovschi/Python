@@ -1,6 +1,6 @@
-# Projects
+# Simple_Projects
 
-Small standalone Python applications, each in its own file, built with the concepts practiced in [`Py_learning`](../Py_learning).
+Small standalone Python applications, each in its own file, built with the concepts practiced in [`Py_learning`](../../Py_learning). For a larger, multi-file project, see the sibling [`AI_FLAPPY_BIRDS`](../AI_FLAPPY_BIRDS) folder.
 
 ## 📁 What's Inside
 

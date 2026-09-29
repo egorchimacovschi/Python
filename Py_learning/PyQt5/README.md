@@ -1,6 +1,8 @@
-# Py_learning
+# PyQt5
 
-A personal collection of Python exercises, concept demos, and small practice programs, all in one folder. Each `.py` file is a standalone script covering a specific topic or mini-project.
+Core Python concepts, exercises, and PyQt5 GUI practice, all in one folder. Each `.py` file is a standalone script covering a specific topic or mini-project.
+
+This folder covers the general Python + PyQt5-GUI side of my practice within [`Py_learning`](../); for game-development practice, see the sibling [`pygame`](../pygame) folder instead.
 
 ## 📁 What's Inside
 
@@ -22,9 +24,9 @@ A personal collection of Python exercises, concept demos, and small practice pro
 - `file_work/` — subfolder covering reading/writing text, CSV, and JSON files (`read_files.py`, `writting_files.py`, `file_detection.py`, plus sample `test`, `test.csv`, `test.json` data files)
 
 **GUI programming (PyQt5)**
-- `GUI.py`, `GUI_buttons.py`, `GUI_checkboxes.py`, `GUI_images.py`, `GUI_labels.py`, `GUI_layot.py`, `GUI_line_edit.py`, `GUI_radiobuttons.py`
+- `GUI.py`, `GUI_buttons.py`, `GUI_checkboxes.py`, `GUI_images.py`, `GUI_labels.py`, `GUI_layot.py`, `GUI_line_edit.py`, `GUI_radiobuttons.py` — `GUI.py` and `GUI_images.py` load `21593.jpg` as a sample image
 - `CSS_style.py` — styling PyQt widgets
-- `digital_clock.py`, `alarm_clock.py`, `StopWhatch.py`, `countdown_timer_program.py`, `weather_app.py` — small GUI apps (uses `DS-DIGIT.TTF` font asset)
+- `digital_clock.py`, `alarm_clock.py`, `StopWhatch.py`, `countdown_timer_program.py`, `weather_app.py` — small GUI apps (`digital_clock.py` uses the `DS-DIGIT.TTF` font asset; `alarm_clock.py` plays `my_music.wav` as its alarm sound)
 
 **Networking**
 - `API_request.py` — making HTTP requests to an external API
@@ -47,6 +49,6 @@ pip install PyQt5 requests
 python3 <filename>.py
 ```
 
-Some scripts depend on a sibling file in this same folder (e.g. `hangman_game.py` imports `wordslist.py`) — run them from within this folder so the import resolves correctly.
+Some scripts depend on a sibling file/asset in this same folder (e.g. `hangman_game.py` imports `wordslist.py`; `GUI.py` loads `21593.jpg`) — run them from within this folder so the relative paths resolve correctly.
 
-<sub>Note: written while following Bro Code's Python tutorials on YouTube; original teaching content © Bro Code.</sub>s
+<sub>Note: written while following Bro Code's Python tutorials on YouTube; original teaching content © Bro Code.</sub>

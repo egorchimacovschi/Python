@@ -9,6 +9,7 @@ from scripts.bird import bird_group
 
 
 
+
 class Game:
     def __init__(self):
         pygame.init()
@@ -27,7 +28,7 @@ class Game:
 
 
         self.screen = pygame.display.set_mode(
-            (self.screen_width, self.screen_height)
+            (self.screen_width, self.screen_height), pygame.SCALED
         )
         pygame.display.set_caption("My Flappy Birds")
 
@@ -171,6 +172,8 @@ class Game:
                 if event.type == pygame.QUIT:
                     pygame.quit()
                     sys.exit()
+                if event.type == pygame.KEYDOWN and event.key == pygame.K_F11:
+                    pygame.display.toggle_fullscreen()
                 if event.type == pygame.MOUSEBUTTONDOWN and self.flying == False and self.game_over == False:
                     self.flying = True
                     self.flappy.flying = True
