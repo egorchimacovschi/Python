@@ -26,7 +26,7 @@ class AIBird(Bird):
         if self.counter > flap_cooldown:
             self.counter = 0
             self.image_index += 1
-            if self.image_index >= len(self.image):
+            if self.image_index >= len(self.images):
                 self.image_index = 0
         self.image = pygame.transform.rotate(self.images[self.image_index], - 2 * self.velocity)
     
