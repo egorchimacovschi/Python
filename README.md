@@ -1,6 +1,6 @@
 # Python
 
-My dedication to Python — a personal collection of exercises, mini-programs, and small GUI/data projects.
+My dedication to Python — a personal collection of exercises, mini-programs, and small GUI/data projects, as a part of my learning experience.
 
 ## 📁 Repository Structure
 
